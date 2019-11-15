@@ -5,13 +5,12 @@ let headwrdPlace= document.querySelector("#headwrd");
 
 //Dictionary API function call
 var dictSearch= (word)=>{
-	//let word= wordList[i];
 	let url= `https://dictionaryapi.com/api/v3/references/learners/json/${word}?key=64da757e-0f61-4e87-9aba-709a6f4a8930`;
 	fetch(url,{
 		method: 'GET',
 		headers:{
-			"x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-			"x-rapidapi-key": "6aa5316395msh17a91652806383cp157156jsnab22f176c843"
+			"merriam-webster-learners-dictionary-host": "dictionaryapi.com",
+			"merriam-webster-learners-dictionary-key": "64da757e-0f61-4e87-9aba-709a6f4a8930 "
 		},
 	})
 	//Lets me know that the transmission was successful
@@ -19,15 +18,21 @@ var dictSearch= (word)=>{
 		console.log(response);
 		return response.json();
 	})
+	//.blob for image, .text for text, .json for data
 	//Where data arrives
 	.then (data => {
 		console.log(data);
+		let displayDef= data.meta.app-shortdef;
+		for (var i=0; i<displayDef.length; i++ ){
+			console.log ("-----Definition");
+			console.log ()
+		}
 	})
 	//Error catch?
 	.catch(err => {
 		console.log(err);
-	});
-}
+	})
+};
 
 //making the search button work
 let newSearch=()=>{ 
@@ -41,3 +46,20 @@ searchBtn.addEventListener("click",newSearch);
 for (var i = Things.length - 1; i >= 0; i--) {
 	Things[i]
 }
+
+//Dictionary side panel animation moves page over to show dictionary results
+const open_btn=document.querySelector("#open_btn");
+const close_btn=document.querySelector("#close_btn");
+const offCanvas=document.querySelector("#offCanvas");
+
+	/*open_btn.addEventListener('click', ()=>{
+		offCanvas.classList.add("active");
+	})*/
+
+	offCanvas.addEventListener('click', ()=>{
+		offCanvas.classList.add("active");
+	});
+
+	close_btn.addEventListener('click', ()=>{
+		offCanvas.classList.remove("active");
+	})

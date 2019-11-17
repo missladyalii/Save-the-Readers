@@ -16,22 +16,39 @@
 	<div id="user_details">
 		<h1>Welcome to your story</h1>
 		<form>
-			My name is <input type="text" name=""/>
+			My name is <input type="text" name="name_input" id="name_input" />
 			<br>
 			
 			Choose your color: 
 			<br>
-			<label><input type="radio" name="radio_group"/>Pink</label>
-			<label><input type="radio" name="radio_group"/>Black</label>
-			<label><input type="radio" name="radio_group"/>Blue</label>
-			<label><input type="radio" name="radio_group"/>Green</label>
-			<br>			
+			<select id="color_list">
+				<option value="Pink">Pink</option>
+				<option value="Blue">Blue</option>
 
+			</select>
 		</form>
 
 		<button id="start_btn"> Start</button>
 
 	</div>
+
+
+	<script type="text/javascript">
+		const start_btn = document.querySelector("#start_btn");
+		const name_input = document.querySelector("#name_input");
+		const color_list = document.querySelector("#color_list");
+
+		let addDetails = () => {
+
+			localStorage.setItem("name", name_input.value);
+			localStorage.setItem("color", color_list.options[color_list.selectedIndex].value);	
+			window.location.href = "pick_singer.html"; 			
+		};
+
+		start_btn.addEventListener("click",addDetails);
+
+	</script>
+
 
 
 </body>

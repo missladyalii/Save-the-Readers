@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Let's Choose a Book</title>
-	<link rel="stylesheet" type="text/css" href="page4.css"> 
+	<title>Choose a Singer</title>
+	<link rel="stylesheet" type="text/css" href="pick_singer.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="ctn">
+	<div id="ctn"> 
 		
-		<div class="ctn1">
-			<div id="ghostCtn">
-				<button> <img src="https://images-na.ssl-images-amazon.com/images/I/51F0NasJE7L.jpg" class="ghost" id="rotateA"> </button>
+		<div id="ctn1">
+			<div id="frozenCtn">
+				<button> <img src="Images/Frozen.jpg" class="frozen" id="rotateA"> </button>
 			</div>
 			<div id="spacer"> <span>
 			</div>
-			<div id= "robotCtn">
-				<button> <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1340757270i/13623777.jpg" class="robot" id="rotateB"> </button>
+			<div id= "lilCtn">
+				<button> <img src="Images/Marshmello.jpg" class="marshmello" id="rotateB"> </button>
 			</div>	
 		</div>	
 
-		<div class="ctn2"> 
-			<h2><center>Hello, ____________ ! <p>Which book would you like to read?</p></center></h2>
+		<div id="ctn2"> 
+			<h2><center><span id="result"></span>! <p>Which singer would you like to listen to?</p></center></h2>
 		</div>	
 		
-		<div class="ctn3"> 
-			<div id="spongeCtn">
-				<button> <img src="https://exstreamist.com/wp-content/uploads/2016/11/Watch-SpongeBob-SquarePants-Online.png" class="sponge" id="rotateC"> </button>
+		<div id="ctn3"> 
+			<div id="lilCtn">
+				<button> <img src="Images/Lil Nas X.jpg" class="lil" id="rotateC"> </button>
 			</div>
 		</div>
 
 	</div>	
+
+	<script type="text/javascript">
+
+
+		const result = document.querySelector("#result");
+
+		result.innerHTML = `Hello, my name is ${localStorage.getItem('name')}`;
+
+		//let change_background = () => {
+		//	document.body.style.backgroundColor = ${localStorage.getItem('color')};
+		//};
+
+		//----.addEventListener("click",change background);		
+
+		//adding the the function or other things makes the text with name disapear 
+		//don't know how to do the event listener. there is no specific action to be made. 
+
+	</script>
+
+
 
 </body>
 </html>

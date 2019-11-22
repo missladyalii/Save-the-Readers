@@ -2,16 +2,17 @@
 let wrdInput=document.querySelector("#WordSrch");
 let searchBtn= document.querySelector("#searchBtn");
 let headwrdPlace= document.querySelector("#headwrd");
+let def= document.querySelector("#def");
 
 //Dictionary API function call
 var dictSearch= (word)=>{
 	let url= `https://dictionaryapi.com/api/v3/references/learners/json/${word}?key=64da757e-0f61-4e87-9aba-709a6f4a8930`;
 	fetch(url,{
 		method: 'GET',
-		headers:{
+		/*headers:{
 			"merriam-webster-learners-dictionary-host": "dictionaryapi.com",
 			"merriam-webster-learners-dictionary-key": "64da757e-0f61-4e87-9aba-709a6f4a8930 "
-		},
+		},*/
 	})
 	//Lets me know that the transmission was successful
 	.then(response => {
@@ -25,7 +26,7 @@ var dictSearch= (word)=>{
 		let displayDef= data.meta.app-shortdef;
 		for (var i=0; i<displayDef.length; i++ ){
 			console.log ("-----Definition");
-			console.log ()
+			//console.log ()
 		}
 	})
 	//Error catch?
@@ -34,27 +35,28 @@ var dictSearch= (word)=>{
 	})
 };
 
+
 //making the search button work
 let newSearch=()=>{ 
-	dictSearch(wrdInput.value);
-	headwrdPlace.innerHTML=`${wrdInput.value}`;
-	for (var i= 0,i<1,i++ ){
-		const = document.createElement("li");
-	}
+	let wrd=wrdInput.value;
+	dictSearch(wrd);
+	headwrdPlace.innerHTML=`${wrd}`;
+	let runner= [0,0]
+	for (var i= runner.length, i <= runner.length, i++ ){
+		const list= document.def.createElement("li");
+	};
 };
 searchBtn.addEventListener("click",newSearch);
-for (var i = Things.length - 1; i >= 0; i--) {
-	Things[i]
-}
+
 
 //Dictionary side panel animation moves page over to show dictionary results
-const open_btn=document.querySelector("#open_btn");
+/*const open_btn=document.querySelector("#open_btn");
 const close_btn=document.querySelector("#close_btn");
 const offCanvas=document.querySelector("#offCanvas");
 
 	/*open_btn.addEventListener('click', ()=>{
 		offCanvas.classList.add("active");
-	})*/
+	})
 
 	offCanvas.addEventListener('click', ()=>{
 		offCanvas.classList.add("active");
@@ -62,4 +64,4 @@ const offCanvas=document.querySelector("#offCanvas");
 
 	close_btn.addEventListener('click', ()=>{
 		offCanvas.classList.remove("active");
-	})
+	})*/

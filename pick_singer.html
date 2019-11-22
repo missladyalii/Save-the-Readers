@@ -36,16 +36,9 @@
 
 		const result = document.querySelector("#result");
 
-		result.innerHTML = `Hello, my name is ${localStorage.getItem('name')}`;
+		result.innerHTML = `Hi ${localStorage.getItem('name')}`;
 
-		//let change_background = () => {
-		//	document.body.style.backgroundColor = ${localStorage.getItem('color')};
-		//};
-
-		//----.addEventListener("click",change background);		
-
-		//adding the the function or other things makes the text with name disapear 
-		//don't know how to do the event listener. there is no specific action to be made. 
+		document.body.style.backgroundColor = localStorage.getItem('color');
 
 	</script>
 

@@ -1,5 +1,6 @@
 body{
 	font-family: 'Noto Sans', sans-serif;
+	background-image: url("Images/Karaoke.jpg");
 }
 
 h1{
@@ -9,7 +10,7 @@ h1{
 
 #user_details{
 	font-size: 20px;
-	background-color: #FFDE73;
+	background-color: rgba(255,222,115,0.9);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -20,6 +21,12 @@ h1{
 	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.0);
 
 }
+
+#user_details form input{
+	width: 50%;
+	height: 25px;
+}
+
 button{
 	font-size: 20px;
 	margin-top: 50px;
@@ -29,4 +36,13 @@ button{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: #5970FF;
+}
+
+
+
+.custom-dropdown #color_list{
+	font-size: 16px;	
+	background-color: white;
+	width: 60%;
+	height: 30px;
 }

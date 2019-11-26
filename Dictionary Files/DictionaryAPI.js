@@ -61,20 +61,24 @@ var dictSearch= (event)=>{
 	.then (data => {
 		console.log(data);
 		
-		let displayDef= data[0].shortdef[0];
+		let displayDef= data[0].shortdef;
 		let displayPoS=data[0].fl;
 		//Dictionary Heirarchy; 
-		let dictPartsAdd= document.createElement("li");
+		
 		//let wrd=wrdInput.value;
 		console.log (displayDef);
 		console.log (displayPoS);
 		//Headword Display
 		headwrdPlace.innerHTML=`${wrdInput.value}`;
-		for (var i=0; i<=displayDef.length; i++ ){
+		//display part of speech and definition
+		for (var i=0; i<=displayDef.length-1; i++ ){
 			console.log ("-----Definition");
+			//part of speech
 			partOSpeech.innerHTML=`${displayPoS}`;
-			let displayDefShow=def.innerHTML=`${displayDef[i]}`;
-			def.append(displayDefShow);
+			//definitions
+			let dictPartsAdd= document.createElement("li");
+			dictPartsAdd.innerHTML=`${data[0].shortdef[i]}`;
+			def.appendChild(dictPartsAdd);
 		};
 	})
 	//Error catch?

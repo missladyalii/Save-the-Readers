@@ -10,12 +10,12 @@
 		
 		<div id="ctn1">
 			<div id="frozenCtn">
-				<button> <img src="Images/Frozen.jpg" class="frozen" id="rotateA"> </button>
+				<button> <img src="Images/Frozen.jpg" class="frozen" id="rotateA" onclick="window.location.href = 'Songs/SongPlay3.html';"></button>
 			</div>
 			<div id="spacer"> <span>
 			</div>
 			<div id= "lilCtn">
-				<button> <img src="Images/Marshmello.jpg" class="marshmello" id="rotateB"> </button>
+				<button> <img src="Images/Marshmello.jpg" class="marshmello" id="rotateB" onclick="window.location.href = 'Songs/SongPlay2.html';"> </button>
 			</div>	
 		</div>	
 
@@ -25,7 +25,7 @@
 		
 		<div id="ctn3"> 
 			<div id="lilCtn">
-				<button> <img src="Images/Lil Nas X.jpg" class="lil" id="rotateC"> </button>
+				<button> <img src="Images/Lil Nas X.jpg" class="lil" id="rotateC" onclick="window.location.href = 'Songs/SongPlay.html';"> </button>
 			</div>
 		</div>
 
@@ -37,7 +37,6 @@
 		const result = document.querySelector("#result");
 
 		result.innerHTML = `Hi ${localStorage.getItem('name')}`;
-
 		document.body.style.backgroundColor = localStorage.getItem('color');
 
 	</script>

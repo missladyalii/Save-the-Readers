@@ -2,12 +2,49 @@
 let wrdInput=document.querySelector("#WordSrch");
 let searchBtn= document.querySelector("#searchBtn");
 let headwrdPlace= document.querySelector("#headwrd");
+let partOSpeech= document.querySelector("#PoS");
 let def= document.querySelector("#def");
 
-//Dictionary API function call
-var dictSearch= (word)=>{
-	let url= `https://dictionaryapi.com/api/v3/references/learners/json/${word}?key=64da757e-0f61-4e87-9aba-709a6f4a8930`;
+//First screen Dict (test)
+var dictSearchTest= ()=>{
+	let url= `https://dictionaryapi.com/api/v3/references/learners/json/test?key=64da757e-0f61-4e87-9aba-709a6f4a8930`;
 	fetch(url,{
+		method: 'GET',
+	})
+	//Lets me know that the transmission was successful
+	.then(response => {
+		console.log(response);
+		return response.json();
+	})
+	.then (data => {
+		console.log(data);
+		let displayDef= data.shortdef;
+		let displayPoS=data.fl;
+		//Dictionary Heirarchy; 
+		let wrd=wrdInput.value;
+			console.log(wrd);
+		//Headword Display
+		headwrdPlace.innerHTML=`${wrd}`;
+		for (var i=0; i<=displayDef.length; i++ ){
+			console.log ("-----Definition");
+			console.log (displayDef);
+			console.log (displayPoS);
+		};
+	})
+	//Error catch?
+	.catch(err => {
+		console.log(err);
+	})
+};
+
+
+
+
+//Dictionary API function call
+var dictSearch= (event)=>{
+	console.log(wrdInput.value);
+	let urlMain= `https://dictionaryapi.com/api/v3/references/learners/json/${wrdInput.value}?key=64da757e-0f61-4e87-9aba-709a6f4a8930`;
+	fetch(urlMain,{
 		method: 'GET',
 		/*headers:{
 			"merriam-webster-learners-dictionary-host": "dictionaryapi.com",
@@ -23,11 +60,26 @@ var dictSearch= (word)=>{
 	//Where data arrives
 	.then (data => {
 		console.log(data);
-		let displayDef= data.meta.app-shortdef;
-		for (var i=0; i<displayDef.length; i++ ){
+		
+		let displayDef= data[0].shortdef;
+		let displayPoS=data[0].fl;
+		//Dictionary Heirarchy; 
+		
+		//let wrd=wrdInput.value;
+		console.log (displayDef);
+		console.log (displayPoS);
+		//Headword Display
+		headwrdPlace.innerHTML=`${wrdInput.value}`;
+		//display part of speech and definition
+		for (var i=0; i<=displayDef.length-1; i++ ){
 			console.log ("-----Definition");
-			//console.log ()
-		}
+			//part of speech
+			partOSpeech.innerHTML=`${displayPoS}`;
+			//definitions
+			let dictPartsAdd= document.createElement("li");
+			dictPartsAdd.innerHTML=`${data[0].shortdef[i]}`;
+			def.appendChild(dictPartsAdd);
+		};
 	})
 	//Error catch?
 	.catch(err => {
@@ -35,18 +87,9 @@ var dictSearch= (word)=>{
 	})
 };
 
-
 //making the search button work
-let newSearch=()=>{ 
-	let wrd=wrdInput.value;
-	dictSearch(wrd);
-	headwrdPlace.innerHTML=`${wrd}`;
-	let runner= [0,0]
-	for (var i= runner.length, i <= runner.length, i++ ){
-		const list= document.def.createElement("li");
-	};
-};
-searchBtn.addEventListener("click",newSearch);
+searchBtn.addEventListener("click",dictSearch);
+
 
 
 //Dictionary side panel animation moves page over to show dictionary results

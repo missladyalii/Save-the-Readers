@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- //add reference to css file -->
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/oldTownRoad.css">
+
+</head>
+
+<body>
+	<main>
+
+		<header>
+			<h1>Fill in the blanks</h1>
+			<h2>Drag the synonyms from the right and drop them on the words in <b>bold </b> on the left</h2>
+		</header>
+
+		
+		
+		<section>
+
+			<!-- Section for Poem -->
+			<div id="poem">
+				<p id="Line30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>"Let It Go"</b></p>
+				<p id="Line31">The snow <b>glows </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> white on the mountain tonight </p>
+				<p id="Line32">Not a <b>footprint </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> to be seen</p>
+				<p id="Line33">A kingdom of <b>isolation </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+				<p id="Line34">And it looks like I'm the queen</p>
+				<p id="Line35">The wind is <b>howling </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> like this swirling storm inside</p>
+				
+				<p id="Line36">Couldn't keep it in, heaven knows I <b>tried </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> !</p>
+				<p id="Line37">Don't let them in, don't let them <b>see </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> </p>
+				<p id="Line38">Be the <b>good </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> girl you always have to be</p>
+				<p id="Line39"><b>Conceal </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> , don't feel, don't let them know</p>
+				<p id="Line40">Well, now they know</p>
+				
+
+			</div>
+			<!-- Section for displaying result -->
+			<div id="result">
+				<p id="resultMsg"></p>
+
+			</div>
+            <!-- Div for Synonym Options -->
+			<div id="synonyms">
+				<p id="OptionForLine31" class="options" draggable="true">radiate</p> 
+				<p id="OptionForLine32" class="options" draggable="true">spoor</p> 
+				<p id="OptionForLine33" class="options" draggable="true">isolation</p> 
+				<p id="OptionForLine35" class="options" draggable="true">bawling</p> 
+				<p id="OptionForLine36" class="options" draggable="true">attempted</p> 
+				<p id="OptionForLine37" class="options" draggable="true">perceive</p>
+				<p id="OptionForLine38" class="options" draggable="true">virtuous</p>
+				<p id="OptionForLine39" class="options" draggable="true">disguise</p>
+				
+			</div>
+
+		</section>
+
+		<footer>
+			<nav>
+				<button id="startAgain_btn" onclick="window.location.reload();" >Start Again</button>
+				<button id="goBack_btn"> Go Back</button>
+			</nav>
+		</footer>
+	</main>
+	
+
+	<!-- //add reference to js file  -->
+	<script type="text/javascript" src="scripts/dragdrop2.js"></script>
+	
+	<script type="text/javascript">
+		document.body.style.backgroundColor = localStorage.getItem('color');
+	</script>
+</body>
+
+
+</html>

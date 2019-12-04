@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- //add reference to css file -->
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/oldTownRoad.css">
+
+</head>
+
+<body>
+	<main>
+
+		<header>
+			<h1>Fill in the blanks</h1>
+			<h2>Drag the synonyms from the right and drop them on the words in <b>bold </b> on the left</h2>
+		</header>
+
+		
+		
+		<section>
+
+			<!-- Section for Poem -->
+			<div id="poem">
+				<p id="Line16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>"Old Town Road"</b></p>
+				<p id="Line01"><b>Old </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>Town Road </p>
+				<p id="Line02">You <b>know </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> what? I'm done, done, done </p>
+				<p id="Line03">Yeah, I'm gonna take my horse to the old <b>town </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> road</p>
+				<p id="Line04">I'm gonna <b>ride </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> 'til I can't no more</p>
+				<p id="Line05">I'm gonna take my horse to the old town <b>road </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+				<p id="Line06">I'm gonna ride 'til I can't no more</p>
+				<p id="Line07">(Kio, Kio)</p>
+				<p id="Line08">I got the horses in the <b>back </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+				<p id="Line09">Horse tack is <b>attached </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+				<p id="Line10">Hat is <b>matte </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> black</p>
+				<p id="Line11">Got the boots that's black to match</p>
+				<p id="Line12">Ridin' on a horse, ha</p>
+				<p id="Line13">You can <b>whip </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> your Porsche</p>
+				<p id="Line14">I been in the valley</p>
+				<p id="Line15">You ain't been up off that <b>porch </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> , now</p>
+				
+
+			</div>
+			<!-- Section for displaying result -->
+			<div id="result">
+				<p id="resultMsg"></p>
+
+			</div>
+            <!-- Div for Synonym Options -->
+			<div id="synonyms">
+				<p id="OptionForLine05" class="options" draggable="true">Pavement</p> 
+				<p id="OptionForLine03" class="options" draggable="true">Borough</p> 
+				<p id="OptionForLine01" class="options" draggable="true">Remote</p> 
+				<p id="OptionForLine02" class="options" draggable="true">Be informed</p> 
+				<p id="OptionForLine04" class="options" draggable="true">Mount</p> 
+				<p id="OptionForLine08" class="options" draggable="true">Rear</p>
+				<p id="OptionForLine15" class="options" draggable="true">entrance</p>
+				<p id="OptionForLine10" class="options" draggable="true">Bright</p>
+				<p id="OptionForLine09" class="options" draggable="true">Joined</p>
+				<p id="OptionForLine13" class="options" draggable="true">Lash</p>
+				
+			</div>
+
+		</section>
+
+		<footer>
+			<nav>
+				<button id="startAgain_btn" onclick="window.location.reload();" >Start Again</button>
+				<button id="goBack_btn"> Go Back</button>
+			</nav>
+		</footer>
+	</main>
+	
+
+	<!-- //add reference to js file  -->
+	<script type="text/javascript" src="scripts/dragdrop2.js"></script>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = localStorage.getItem('color');
+	</script>
+</body>
+
+
+</html>

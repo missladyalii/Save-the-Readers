@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- //add reference to css file -->
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/Happier.css">
+
+</head>
+
+<body>
+	<main>
+
+		<header>
+			<h1>Fill in the blanks</h1>
+			<h2>Drag the synonyms from the right and drop them on the words in <b>bold </b> on the left</h2>
+		</header>
+
+		
+		
+		<section>
+
+			<!-- Section for Poem -->
+			<div id="poem">
+				<p id="Line17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>"Happier"</b></p>
+				<p id="Line18"><b>Lately </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> , I've been, I've been thinking </p>
+				<p id="Line19">I want you to be happier, I want you to be <b>happier </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p id="Line20">When the morning comes</p>
+				<p id="Line21">When we <b>see </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> what we've become</p>
+				<p id="Line22">In the cold light of day we're a <b>flame </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> in the wind</p>
+				<p id="Line23">Not the fire that we've begun</p>
+				<p id="Line24">Every <b>argument </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>, every word we can't take back</p>
+				<p id="Line25">'Cause with all that has happened</p>
+				<p id="Line26">I think that we both know the way that the <b>story </b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> ends</p>
+				
+
+			</div>
+			<!-- Section for displaying result -->
+			<div id="result">
+				<p id="resultMsg"></p>
+
+			</div>
+            <!-- Section for Synonym Options -->
+			<div id="synonyms">
+				<p id="OptionForLine19" class="options" draggable="true">cheerful</p>
+				<p id="OptionForLine26" class="options" draggable="true">chronicle</p> 
+				<p id="OptionForLine21" class="options" draggable="true">perceive</p> 				
+				<p id="OptionForLine24" class="options" draggable="true">disagreement</p>		
+				<p id="OptionForLine22" class="options" draggable="true">blaze</p> 
+				<p id="OptionForLine18" class="options" draggable="true">recently</p>			
+			</div>
+
+		</section>
+
+		<footer>
+			<nav>
+				<button id="startAgain_btn" onclick="window.location.reload();" >Start Again</button>
+				<button id="goBack_btn"> Go Back</button>
+			</nav>
+		</footer>
+	</main>
+	
+
+	<!-- //add reference to js file  -->
+	<script type="text/javascript" src="scripts/dragdrop2.js"></script>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = localStorage.getItem('color');
+	</script>
+</body>
+
+
+</html>

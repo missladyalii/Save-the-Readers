@@ -19,6 +19,34 @@
 			margin: 10px;
 			padding: 20px;
 		}
+		ul {
+			list-style-type: none;
+			margin:0;
+			padding: 8px;
+			font-family: 'Julius Sans One', sans-serif;
+			text-align: center;
+			overflow: hidden;
+			
+		}
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		  background-color: #111;
+		}
+
+		.active {
+		  background-color: #4CAF50;
+		}
 
 		.row {
 			display: flex;
@@ -139,12 +167,20 @@
 	<div id= "Dictionary">
 		<h3>Here are some new words have synonyms in...</h3>
 		<h1> Happier </h1>
-		
-		<button id="searchBtn">Search</button>
 		<div>
-			<h2 id="headwrd"></h2>
-			<h3 id="PoS"><em></em></h3>
-			<ul id="def"></ul>
+			<ul>
+				<li>Cheerful</li>
+				<li>Chronicle</li>
+				<li>Percieve</li>
+				<li>Disagreement</li>
+				<li>Blaze</li>
+				<li>Recently</li>
+			</ul>
+			<div>
+				<h2 id="headwrd"></h2>
+				<h3 id="PoS"><em></em></h3>
+				<ul id="def"></ul>
+			</div>
 		</div>
 	<script type="text/javascript", src="DictionaryAPI.js">
 		//let wordList=['I', 'can','read','this', 'list'];

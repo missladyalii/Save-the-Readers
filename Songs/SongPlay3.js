@@ -26,4 +26,3 @@ function loadSongs(artist, title){
 
 let x = document.querySelector("#buttonLyric");
 x.addEventListener("click", loadSongs);
-

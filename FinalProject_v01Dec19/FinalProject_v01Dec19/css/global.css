@@ -15,8 +15,9 @@ nav{
 /*Styles for Poem Box*/
 div#poem{
 	
-	background-color: MistyRose;
+	/*background-color: MistyRose;*/
 	font-family: "Comic Sans MS", cursive, sans-serif;
+	box-shadow: 0 8px 6px -6px black;
 	color: #080808;
 	padding: 100;
 	margin: 100;
@@ -29,6 +30,7 @@ div#poem{
 div#result{
 	display : flex;
 	flex-direction: column-reverse;
+	box-shadow: 0 8px 6px -6px black;
 	/*align-items: ver;*/
 	font-weight: bold;
 	padding: 100;
@@ -41,14 +43,15 @@ div#result{
 /*Styles for Synonyms Box*/
 div#synonyms{
 	border-radius: 25px;
-	background-color: cornsilk;
+	/*background-color: cornsilk;*/
+	box-shadow: 0 8px 6px -6px black;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: #080808;
 	padding: 100;
 	margin:100;
 	min-width: 360 px;
 	max-width: 360 px;
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 
 }
 
@@ -69,6 +72,16 @@ header {
 	align-items: flex-start;
 	flex-direction: column;
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	color: yellow;
+	/*color: yellow;*/
+}
+
+#startAgain_btn {
+	box-shadow: 1px rgba(255, 255, 255, 0.3);
+	background-color: blue;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	color: white;
+	font-size: 18px;
 }
 

@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Old Town Road Dictionary</title>
+	<title>Happier Dictionary</title>
+
 	<style type="text/css" >
 		@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 		body {
 			font-family: 'Noto Sans', sans-serif;
 			background-color: #CCFFD8 ;
 			padding: 10px;
-			margin: 30px;
-			
+			margin: 30px;	
 			justify-content: center;
 		}
 
 		button {
 			font-family: 'Julius Sans One', sans-serif;
 			text-align: center;
+			box-shadow: 1px rgba(255, 255, 255, 0.3);
+			width: 200px;
+			height: 50px;
+			border-radius: 10px;
+			color: black;
+			font-size: 18px;
+			float: right;
+			background-color: blue;
+			color: white;
 		}
 
 		header {
@@ -47,11 +56,25 @@
 		<p id=titleSong> Happier </p>
 	</header>
 	<div id=Dictionary></div>
-	<script type="text/javascript", src="DictionaryAPI.js">
+	 <script type="text/javascript", src="DictionaryAPI.js">
 			
 	</script>
 	</div>
 	<footer><button> Take the Quiz >></button></footer>
+
+	<script type="text/javascript", src="DictionaryAPI.js"></script>
+	</div>
+	<footer>
+
+		<button onclick="window.location.href = '../FinalProject_v01Dec19/FinalProject_v01Dec19/finalProjectHappier.html';"> Take the Quiz</button>
+
+	</footer>
+
+	<script type="text/javascript">
+		document.body.style.backgroundColor = localStorage.getItem('color');
+	</script>
+
+
 </body>
 
 </html>
